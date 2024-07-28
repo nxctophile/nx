@@ -1,0 +1,104 @@
+.topbar-container {
+  backdrop-filter: blur(5px);
+  background: #171717aa;
+  border: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 2em;
+  padding-right: 1.4em;
+  width: 90%;
+  position: fixed;
+  top: 1em;
+  left: 50%;
+  border-radius: 20rem;
+  transform: translate(-50%, 0);
+  color: #fff;
+  z-index: 3;
+}
+
+.branding-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branding-text {
+  display: flex;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.branding-icon {
+  margin-bottom: 0.8em;
+  margin-right: 0.4em;
+  width: 1.4rem;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20em;
+  padding: 0.4em 1em;
+}
+
+.switch-option {
+  margin: 0 0.2em;
+  span {
+    position: relative;
+    top: 0.1em;
+  }
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+}
+
+.links-container {
+  display: flex;
+  margin-right: 0.4em;
+}
+
+.link-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-button {
+  margin-left: 0.4em;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  border-radius: 10rem;
+  padding: 0.6em 0.8em;
+  transition: 0.2s;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.create-account {
+  background: #ddd;
+  color: #000;
+  border: 1px solid #444;
+}
+
+@media (hover: hover) {
+  .text-link:hover {
+    border-bottom: 1px solid;
+  }
+}

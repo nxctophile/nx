@@ -1,0 +1,216 @@
+.main-container {
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1920 1080' width='1920' height='1080' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cpath d='M0 249L175 390L349 293L524 401L698 185L873 174L1047 174L1222 239L1396 325L1571 390L1745 433L1920 347L1920 0L1745 0L1571 0L1396 0L1222 0L1047 0L873 0L698 0L524 0L349 0L175 0L0 0Z' fill='%23272727'%3E%3C/path%3E%3Cpath d='M0 681L175 692L349 714L524 714L698 660L873 617L1047 509L1222 779L1396 617L1571 671L1745 638L1920 552L1920 345L1745 431L1571 388L1396 323L1222 237L1047 172L873 172L698 183L524 399L349 291L175 388L0 247Z' fill='%23212121'%3E%3C/path%3E%3Cpath d='M0 768L175 768L349 833L524 789L698 800L873 822L1047 714L1222 876L1396 822L1571 865L1745 725L1920 725L1920 550L1745 636L1571 669L1396 615L1222 777L1047 507L873 615L698 658L524 712L349 712L175 690L0 679Z' fill='%231c1c1c'%3E%3C/path%3E%3Cpath d='M0 984L175 1016L349 1016L524 930L698 941L873 1005L1047 908L1222 984L1396 1005L1571 962L1745 908L1920 919L1920 723L1745 723L1571 863L1396 820L1222 874L1047 712L873 820L698 798L524 787L349 831L175 766L0 766Z' fill='%23171717'%3E%3C/path%3E%3Cpath d='M0 1081L175 1081L349 1081L524 1081L698 1081L873 1081L1047 1081L1222 1081L1396 1081L1571 1081L1745 1081L1920 1081L1920 917L1745 906L1571 960L1396 1003L1222 982L1047 906L873 1003L698 939L524 928L349 1014L175 1014L0 982Z' fill='%23111111'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid #444;
+  padding: 1.8em;
+  margin-top: 5em;
+  border-radius: 2em;
+  backdrop-filter: blur(8px);
+  background: #17171777;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #eee;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.branding-icon {
+  background: #eee;
+  border: 2px solid #ddd;
+  border-radius: 20em;
+  height: 1.8em;
+  width: 1.8em;
+  margin-right: 0.4em;
+}
+
+.branding-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+form {
+  margin-top: 2em;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  margin: 0.3em 0;
+
+  span {
+    margin-left: 0.1em;
+    font-size: 1.2rem;
+    transition: 0.2s;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  background: transparent;
+  height: 2.6em;
+  width: 97.5%;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 0.6em;
+  font-size: 1.2rem;
+  padding-left: 0.4em;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #38d955;
+}
+
+.login-button {
+  margin: 0.5em 0;
+  height: 3em;
+  width: 100%;
+  border-radius: 1em;
+  border: 1px solid #444;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+@media (hover: hover) {
+  .login-button:hover {
+    cursor: pointer;
+    background: #eee;
+    color: #000;
+    box-shadow: 0 0 10px #aaa;
+  }
+}
+
+.or {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 20em;
+  padding: 0.9em;
+  margin: 1em;
+  transition: 0.2s;
+}
+
+.social-icon {
+  font-size: 10em;
+}
+
+@media (hover: hover) {
+  .social-option:hover {
+    cursor: pointer;
+    border-color: #eee;
+  }
+}
+
+.links-container {
+  height: 3.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0.2em;
+
+  a {
+    font-family: "Montserrat", sans-serif;
+    transition: 0.2s;
+  }
+}
+
+.link-component:hover {
+  border-bottom: 1px solid;
+  font-size: 1000px;
+}
+
+.main-or {
+  margin-left: 1.5em;
+}
+
+.skip-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid #444;
+  font-size: 1.4rem;
+  padding: 1em;
+  border-radius: 20rem;
+  margin: 1em;
+  transition: 0.2s;
+}
+
+.skip-button-text {
+  margin-right: 0.4em;
+  transition: 0.2s;
+}
+
+@media (hover: hover) {
+  .skip-button:hover {
+    cursor: pointer;
+    background: #eee;
+    color: #000;
+    box-shadow: 0 0 10px #aaa;
+
+    span {
+      color: #000;
+    }
+  }
+}
