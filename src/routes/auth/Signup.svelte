@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Link } from "svelte-routing";
+  import { Link, navigate } from "svelte-routing";
   import logo from "../../assets/rhythmie-icon.png";
   import Iconify from "@iconify/svelte";
   import { register } from "../../lib/api";
@@ -35,12 +35,16 @@
     try {
       const res = await register(email, password, name);
       handleDialog();
-      alert(res.message);
+      console.log(res.message);
     } catch (err) {
       console.error(err);
-      alert('Registration failed');
+      console.log('Registration failed');
     }
   };
+
+  const redirectTo = () => {
+    navigate("/login");
+  }
 </script>
 
 <svelte:head>
@@ -161,23 +165,22 @@
           Create account
         </button>
       </div>
-
-      <div bind:this={dialogBox} class="dialog-container">
-        <div class="dialog-box">
-          <div class="dialog-title">Check your inbox</div>
-          <div class="dialog-content">Verify your email before logging in.</div>
-          <div class="dialog-animation">
-            <img
-              src="https://cdn.dribbble.com/userupload/11000554/file/original-ec4e1c3d9d5c3a5d9f7261ce0bba400d.gif"
-              alt="E-mail received animation"
-            />
-          </div>
-          <div class="dialog-actions">
-            <button type="submit" class="dialog-button">OK</button>
-          </div>
+    </form>
+    <div bind:this={dialogBox} class="dialog-container">
+      <div class="dialog-box">
+        <div class="dialog-title">Check your inbox</div>
+        <div class="dialog-content">Verify your email before logging in.</div>
+        <div class="dialog-animation">
+          <img
+            src="https://cdn.dribbble.com/userupload/11000554/file/original-ec4e1c3d9d5c3a5d9f7261ce0bba400d.gif"
+            alt="E-mail received animation"
+          />
+        </div>
+        <div class="dialog-actions">
+          <button on:click={redirectTo} class="dialog-button">OK</button>
         </div>
       </div>
-    </form>
+    </div>
   </div>
   <div class="link">
     By creating an account, you agree to our
